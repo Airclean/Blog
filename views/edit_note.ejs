@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs%>
+<div class="ui text main container segment">
+<div class="ui huge header">Edit <%=note.title%></div>
+<form method="POST" action="/blogs/notes/<%=note._id%>?_method=PUT" class="ui form">
+    <div class="field">
+        <label>Title</label>
+        <input type="text" name="Note[title]" value="<%=note.title%>">
+    </div>
+    <div class="field">
+        <label>Note Content</label>
+        <textarea required name="Note[body]"><%=note.body%></textarea>
+    </div>
+    <input type="submit" class="ui large olive button">
+</form>
+</div>
+<% include ./partials/footer.ejs%>

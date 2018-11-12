@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs%>
+    <div class="ui text main container">
+        <div class="ui huge header">Create a new note</div>
+        <form action="/blogs/notes" method="POST" class="ui form">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="Note[title]" placeholder="please write title here">
+            </div>
+            <div class="field">
+                <label>Content</label>
+                <textarea required name="Note[body]"></textarea>
+            </div>
+            <input type="submit" class="ui large olive button">
+        </form>
+    </div>
+<% include ./partials/footer.ejs%>
